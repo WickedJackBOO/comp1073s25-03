@@ -25,14 +25,14 @@ Browser APIs allow JavaScript to do things like update the Document Object Model
 // STEP 2: Get the EM element and store as a variable, using const
 const element = document.querySelector("em");
 // STEP 3: Assign a click event listener to the above element, and include a reference to the function to be invoked
-element.addEventListener("click", updateName);
+// element.addEventListener("click", updateName);
 // STEP 4: Creat a function that waits for the above click event
 function updateName(){
 	console.log("hello world from function updateName()");
 	// STEP 4a: Display a prompt asking for input, and assign the input to a variable using let
-	
+	let firstName = prompt("what is your name?");
 	// STEP 4b: Grab the input from the variable and build a new string, then change the text inside the EM element, using the textContent property
-	
+	element.textContent = firstName;
 }
 // STEP 5: Comment out the addEventListener above, and replace it with an onclick attribute typed directly into the EM element in the HTML - note that this is common, but it is considered to be bad practice - separate your HTML and your JS
 
